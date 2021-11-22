@@ -16,7 +16,7 @@ after_success:
   - docker build -t emugisha/complex-worker ./worker
 
 # Log in to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --passowrd-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # Push images to docker hub
   - docker push emugisha/complex-client
   - docker push emugisha/complex-nginx
